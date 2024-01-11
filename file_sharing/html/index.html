@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Overpass:ital,wght@1,100&family=Poppins:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>auth_system</title>
+</head>
+<body>
+    <div class="main">
+        <div class="form_box">
+            <button class="login/signup" onclick="login()">Login</button>
+            <button class="login/signup" onclick="register()">Sign-up</button>
+            <form id='sign_up' class="input_form">
+                <label class="labels">Enter username</label>
+                <input id="sign_up_username" type= "text" class="input_field" placeholder="Username">
+                <label class="labels">Enter Email</label>
+                <input id="sign_up_email" type= "email" class="input_field" placeholder="email">
+                <label class="labels">Password</label>
+                <input id="sign_up_password" type= "password" class="input_field" placeholder="Password">
+                <button type= "submit" class="submit_btn">Sign Up</button>
+            </form>
+
+            <form id='sign_in' class="input_form">
+                <label class="labels">Enter Email/Username</label>
+                <input id="emailInp" type= "email" class="input_field" placeholder="Email/Username">
+                <label class="labels">Password</label>
+                <input id="passInp" type= "password" class="input_field" placeholder="Password">
+                <button type= "submit" class="submit_btn">Log in</button>
+            </form>
+        </div>
+    </div>
+<script>
+    var x= document.getElementById("sign_in")
+    var y= document.getElementById("sign_up")
+    function login(){
+        x.style.left = "0px"
+        y.style.left = "-300px"
+    }
+
+    function register(){
+        x.style.left = "-300px"
+        y.style.left = "0px"
+    }
+</script>
+    <script src="../scripts/login.js" type="Module"></script>
+    <!--<script src="../scripts/signup.js" type="Module"></script> -->
+</body>
+</html>

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.form_box{
+    position: relative;
+    background-color: black;
+    height: 450px;
+    width: 310px;
+    margin: 5% auto;
+    border-radius: 25px;
+    overflow: hidden;
+    
+}
+
+.input_form{
+    font-family: 'Caveat', cursive;
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    width: 250px;
+    height:200px;
+    position: absolute;
+    padding: 10px;
+    margin-top: 70px;
+    transition: 0.5s;
+}
+.input_field{
+    width: 100%;
+    height: 40px;
+    padding: 5px 0px;
+    margin: 4px 20px;
+    outline: none;
+    border: 1px solid rgb(28, 238, 28);
+    border-radius: 3px;
+    font-size: 23px;
+}
+.labels{
+    color: rgb(28, 238, 28);
+    margin: 4px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.submit_btn{
+    width: 100%;
+    height: 35px;
+    margin: 40px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(28, 238, 28);
+    color: black;
+}
+#sign_in{
+    left: -300px;
+}
+
+#sign_up{
+    left: 0px;
+}

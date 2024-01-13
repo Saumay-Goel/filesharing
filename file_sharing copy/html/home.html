@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/assets.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="ufo_light">
+        
+    </div>
+    <!--ufo animation-->
+    <div class="ufo_last_y">
+        <div class="ufo_main_y">
+            <div class="ufo_main_x">
+                <div class="ufo_first_y">
+                    <div class="ufo_y"><img src="../assets/ufo.png" alt="" class="ufo" height="70px" width="120px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--x------x------x-----x------x------x-------x-->
+
+    <div class="main_container">
+        <div class="nav_bar">
+            <p class="site_name">Shuttle Share</p>
+            <button class="sign_out">Sign Out</button>
+        </div>
+
+        <div id="sub_container_A">
+            <div id="main_function">
+                <img src="../assets/logo.png" alt="" height="100px" width="100px" class="logo">
+                <p id="welcome"><span >Hello</span> <span style="color: white;" id="user"></span></p>
+                <hr class="break_lines">
+
+                <form id="upload_form">
+                    <input type="file" id="file" placeholder="Select File" multiple>
+                    <button type="submit" id="submit_btn">Upload</button>
+                </form>
+                <form action="" class="wrapper">
+                    <input type="text" class="url_box">
+                    <button type="submit" class="copy"><i class="fa-regular fa-copy"></i></button>
+                </form>
+                <hr class="break_lines">
+                <form action="" class="send_form">
+                    <input type="email" class="send_box">
+                    <button type="submit" class="send_btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <div id="cont_anime">
+                <div class="move_whole_body">
+                    <div class="box_lid_rot">
+                        <div class="box_lid_x">
+                            <div class="up_box_lid"><img class="box_lid" src="../assets/lid_box.png" alt="" width="58" height="25"></div>
+                        </div>
+                    </div>
+                    <div class="up_box_body"><img class="box_body" src="../assets/box_body.png" alt="" width="50" height="25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="file_icon_y" class="">
+        <div class="file_icon_x">
+            <img src="../assets/file_icon.png" class="file_icon" width="40" height="40">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let test_head = document.getElementById('user')
+        let signout = document.querySelector('.sign_out')
+        let usercreds = JSON.parse(sessionStorage.getItem("user-creds"));
+        let userinfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+        //test_head.innerText = userinfo.username
+        var typed = new Typed("#user",{
+            strings: [userinfo.username],
+            typeSpeed: 200,
+            loop: false
+        })
+
+        let SignOut = () =>{
+            sessionStorage.removeItem("user-creds");
+            sessionStorage.removeItem("user-info");
+            window.location.href = "../html/index.html"
+        }
+
+        let CheckRead = () =>{
+            if (!sessionStorage.getItem("user-creds"))
+                window.location.href = "../html/index.html"
+        }
+
+        signout.addEventListener("click",SignOut)
+        window.addEventListener('load',CheckRead)
+    </script>
+    <script src="../scripts/file_storage.js" type="module"></script>
+    <script src="../scripts/animation.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/7238e061a2.js" crossorigin="anonymous"></script>
+</body>
+</html>

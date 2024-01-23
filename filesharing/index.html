@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "../css/home.css">
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+    <div class="main_container">
+        <div class="nav_bar">
+            <p class="site_name">Shuttle Share</p>
+            <button class="aboutus">About Us</button>
+        </div>
+
+        <div id="sub_container_A">
+            <div id="main_function">
+                <img src="../assets/logo.png" alt=""  class="logo">
+                <p id="welcome"><span >Hello</span> <span style="color: white;" id="user"></span></p>
+                <hr class="break_lines">
+
+                <form id="upload_form">
+                    <input type="file" id="file" placeholder="Select File" multiple>
+                    <button type="submit" id="submit_btn">Upload</button>
+                </form>
+                <form action="" class="wrapper">
+                    <input type="text" class="url_box">
+                    <button type="submit" class="copy"><i class="fa-regular fa-copy"></i></button>
+                </form>
+                <hr class="break_lines">
+                <!-- <form action="" class="send_form">
+                    <input type="email" class="send_box">
+                    <button type="submit" class="send_btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </form> -->
+            </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script type="Module">
+        var typed = new Typed("#user",{
+            strings: ["User"],
+            typeSpeed: 200,
+            loop: false
+        })
+
+    </script>
+    <script src="../scripts/file_storage.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/7238e061a2.js" crossorigin="anonymous"></script>
+</body>
+</html>
